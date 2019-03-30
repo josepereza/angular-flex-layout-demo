@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import {Routes, RouterModule, ExtraOptions} from '@angular/router';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 const DEMO_APP_ROUTES: Routes = [
@@ -14,10 +14,14 @@ const DEMO_APP_ROUTES: Routes = [
   }
 ];
 
+const routeOptions: ExtraOptions = {
+  enableTracing: true
+}
+
 @NgModule({
   exports: [RouterModule],
   imports: [
-    RouterModule.forRoot(DEMO_APP_ROUTES)
+    RouterModule.forRoot(DEMO_APP_ROUTES, routeOptions)
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy}

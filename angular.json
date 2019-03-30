@@ -26,6 +26,18 @@
             "scripts": []
           },
           "configurations": {
+            "development":{
+              "optimization": false,
+              "outputHashing": "none",
+              "sourceMap": true,
+              "extractCss": true,
+              "namedChunks": true,
+              "aot": false,
+              "extractLicenses": true,
+              "vendorChunk": true,
+              "buildOptimizer": false,
+              "commonChunk": true
+            },
             "production": {
               "optimization": true,
               "outputHashing": "all",
@@ -51,6 +63,9 @@
             "browserTarget": "demo-app:build"
           },
           "configurations": {
+            "development":{
+              "browserTarget": "demo-app:build:development"
+            },
             "production": {
               "browserTarget": "demo-app:build:production"
             }

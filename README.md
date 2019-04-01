@@ -16,6 +16,7 @@ It is loosely based on the [Demo App](https://github.com/angular/flex-layout/tre
 
 ## Additional Information
 * [Angular Flex-Layout on GitHub](https://github.com/angular/flex-layout)
+* [Angular Flex WiKi](https://github.com/angular/flex-layout/wiki)
 * [Online Demos](https://tburleson-layouts-demos.firebaseapp.com/)
 * [Demo Source Code this repository is based upon](https://github.com/angular/flex-layout/tree/master/src/apps/demo-app)
 * [Article: Angular In Depth - Angular Flex-Layout](https://blog.angularindepth.com/angular-flex-layout-flexbox-and-grid-layout-for-angular-component-6e7c24457b63)

@@ -1,15 +1,12 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FlexLayoutModule} from '@angular/flex-layout';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
-import {MediaQueryStatusComponent} from './media-query-status.component';
+import { MediaQueryStatusComponent } from './media-query-status.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FlexLayoutModule,
-  ],
+  imports: [CommonModule, FlexLayoutModule],
   declarations: [MediaQueryStatusComponent],
   exports: [MediaQueryStatusComponent]
 })
-export class MediaQueryStatusModule { }
+export class MediaQueryStatusModule {}

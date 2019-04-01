@@ -8,6 +8,7 @@ It is loosely based on the [Demo App](https://github.com/angular/flex-layout/tre
 
 ## Differences with original Demo App
 * I have split out the inline Styles and HTML into separate .scss and .html files.
+* Moved `style=""` within html to the separate component .scss file as a named class and then replaced the inline style with a class="" reference in the html.
 * I have added three Angular services to provide information about:
   * Which version of Angular is being used
   * Which version of Angular Material is being used

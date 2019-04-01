@@ -1,10 +1,10 @@
 <mat-card class="card-demo">
-  <mat-card-title>Layout Children with 'layout-align'</mat-card-title>
+  <mat-card-title>Layout Children with 'layout-align' (LayoutAlignmentComponent)</mat-card-title>
   <mat-card-subtitle></mat-card-subtitle>
   <mat-card-content>
     <div class="containerX">
       <div class="colorNested box" [class.taller]="options.direction != 'row'">
-        <div [fxLayout]="options.direction" [fxLayoutAlign]="layoutAlign()" style="height: 100%;">
+        <div [fxLayout]="options.direction" [fxLayoutAlign]="layoutAlign()" class="fullHeight">
           <div class="blocks one">1</div>
           <div class="blocks" [class.two_h]="options.direction == 'row'"
                [class.two_w]="options.direction != 'row'">2
@@ -56,8 +56,8 @@
       </div>
     </form>
   </mat-card-actions>
-  <mat-card-footer style="width:95%;">
-    <div class="hint forceAbove" style="padding-left:50px;">
+  <mat-card-footer class="width95pct">
+    <div class="hint forceAbove footerLeftIndent" >
       &lt;div fxLayout="{{ options.direction }}"
       <span style="padding-left: 30px">fxLayoutAlign="{{ layoutAlign() }}"</span>
       &gt;

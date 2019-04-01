@@ -1,7 +1,7 @@
-import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
-
-import {GithubIssuesComponent} from './github-issues/github-issues.component';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+//
+import { GithubIssuesComponent } from './github-issues/github-issues.component';
 
 @NgModule({
   imports: [

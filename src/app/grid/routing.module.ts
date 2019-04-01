@@ -1,7 +1,7 @@
-import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
-import {DocsGridComponent} from './docs-grid/docs-grid.component';
+import { DocsGridComponent } from './docs-grid/docs-grid.component';
 
 @NgModule({
   imports: [

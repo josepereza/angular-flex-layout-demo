@@ -10,7 +10,7 @@ export class FlexAlignSelfComponent {
   alignTo = 'center';
 
   toggleAlignment() {
-    let j = ALIGN_OPTIONS.indexOf(this.alignTo);
+    const j: number = ALIGN_OPTIONS.indexOf(this.alignTo);
     this.alignTo = ALIGN_OPTIONS[(j + 1) % ALIGN_OPTIONS.length];
   }
 }

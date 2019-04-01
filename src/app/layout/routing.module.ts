@@ -1,7 +1,7 @@
-import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
-
-import {DocsLayoutComponent} from './docs-layout/docs-layout.component';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+//
+import { DocsLayoutComponent } from './docs-layout/docs-layout.component';
 
 @NgModule({
   imports: [

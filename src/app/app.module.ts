@@ -5,7 +5,7 @@ import {FlexLayoutModule, BREAKPOINT} from '@angular/flex-layout';
 
 import {RoutingModule} from './routing.module';
 import {AppComponent} from './app.component';
-import {DemoMaterialModule} from './material.module';
+import {CustomMaterialModule} from './material.module';
 import {
   YBA_BREAKPOINT_PROVIDER
 } from './stack-overflow/hide-custom-bp/hide-with-custom-bp.component';
@@ -28,7 +28,7 @@ const EXTRA_BREAKPOINTS = [{
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     RoutingModule,
-    DemoMaterialModule,
+    CustomMaterialModule,
     FlexLayoutModule.withConfig({
       useColumnBasisZero: false,
       printWithBreakpoints: ['md', 'lt-lg', 'lt-xl', 'gt-sm', 'gt-xs']

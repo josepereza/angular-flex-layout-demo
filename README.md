@@ -14,6 +14,16 @@ It is loosely based on the [Demo App](https://github.com/angular/flex-layout/tre
   * Which version of Angular Material is being used
   * Which version of Angular Flex Layout is being used
 * I created separate *Development* vs. *Production* configurations inside `angular.json` and use them in my modified version of `package.json` which contains separate `ng build` and `ng serve` commands for both configurations.
+* I turned on route tracing in `routing.module.ts` via `ExtraOptions` as shown below (only the most significant code snippets are shown here):
+```typescript
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
+
+const routeOptions: ExtraOptions = {
+  enableTracing: true
+};
+
+ imports: [RouterModule.forRoot(DEMO_APP_ROUTES, routeOptions)],
+```
 
 ## Additional Information
 * [Angular Flex-Layout on GitHub](https://github.com/angular/flex-layout)

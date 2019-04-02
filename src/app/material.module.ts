@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 
-/* import {MatButtonModule} from '@angular/material/button';
+/*
+import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
-import {MatRippleModule} from '@angular/material/core'; */
+import {MatRippleModule} from '@angular/material/core';
+*/
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -45,7 +47,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { ObserversModule } from '@angular/cdk/observers';
 
 /**
- * NgModule that includes all Material modules that are required to serve the demo-app.
+ * NgModule that includes all Material modules that are required to by the app.
  */
 @NgModule({
   imports: [
@@ -81,7 +83,9 @@ import { ObserversModule } from '@angular/cdk/observers';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    CdkTableModule
+    CdkTableModule,
+    ObserversModule,
+    PlatformModule
   ],
   exports: [
     MatAutocompleteModule,
@@ -93,6 +97,7 @@ import { ObserversModule } from '@angular/cdk/observers';
     MatDatepickerModule,
     MatDialogModule,
     MatExpansionModule,
+    MatFormFieldModule,
     MatGridListModule,
     MatIconModule,
     MatInputModule,

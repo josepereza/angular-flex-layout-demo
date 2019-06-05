@@ -23,7 +23,7 @@ import {SplitAreaDirective} from './split-area.directive';
 })
 export class SplitDirective implements AfterContentInit, OnDestroy {
   @Input('ngxSplit') direction = 'row';
-  @ContentChild(SplitHandleDirective) handle: SplitHandleDirective;
+  @ContentChild(SplitHandleDirective, /* TODO: add static flag */ {}) handle: SplitHandleDirective;
   @ContentChildren(SplitAreaDirective) areas: QueryList<SplitAreaDirective>;
 
   private watcher: Subscription;

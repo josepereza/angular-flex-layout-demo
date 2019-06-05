@@ -6,14 +6,13 @@ import {
   ElementRef,
   Input,
   OnDestroy,
-  QueryList,
+  QueryList
 } from '@angular/core';
-import {FlexDirective} from '@angular/flex-layout';
-import {Subscription} from 'rxjs';
+import { FlexDirective } from '@angular/flex-layout';
+import { Subscription } from 'rxjs';
 
-import {SplitHandleDirective} from './split-handle.directive';
-import {SplitAreaDirective} from './split-area.directive';
-
+import { SplitHandleDirective } from './split-handle.directive';
+import { SplitAreaDirective } from './split-area.directive';
 
 @Directive({
   selector: '[ngxSplit]',
@@ -23,7 +22,8 @@ import {SplitAreaDirective} from './split-area.directive';
 })
 export class SplitDirective implements AfterContentInit, OnDestroy {
   @Input('ngxSplit') direction = 'row';
-  @ContentChild(SplitHandleDirective, /* TODO: add static flag */ {}) handle: SplitHandleDirective;
+  @ContentChild(SplitHandleDirective, { static: true })
+  handle: SplitHandleDirective;
   @ContentChildren(SplitAreaDirective) areas: QueryList<SplitAreaDirective>;
 
   private watcher: Subscription;
@@ -42,13 +42,13 @@ export class SplitDirective implements AfterContentInit, OnDestroy {
    * While dragging, continually update the `flex.activatedValue` for each area
    * managed by the splitter.
    */
-  onDrag({x, y}: {x: number, y: number}): void {
-    const dragAmount = (this.direction === 'row') ? x : y;
+  onDrag({ x, y }: { x: number; y: number }): void {
+    const dragAmount = this.direction === 'row' ? x : y;
 
     this.areas.forEach((area, i) => {
       // get the cur flex and the % in px
-      const flex = (area.flex as FlexDirective);
-      const delta = (i === 0) ? dragAmount : -dragAmount;
+      const flex = area.flex as FlexDirective;
+      const delta = i === 0 ? dragAmount : -dragAmount;
       const currentValue = flex.activatedValue;
 
       // Update Flex-Layout value to build/inject new flexbox CSS

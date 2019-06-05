@@ -31,3 +31,42 @@ const routeOptions: ExtraOptions = {
 * [Online Demos](https://tburleson-layouts-demos.firebaseapp.com/)
 * [Demo Source Code this repository is based upon](https://github.com/angular/flex-layout/tree/master/src/apps/demo-app)
 * [Article: Angular In Depth - Angular Flex-Layout](https://blog.angularindepth.com/angular-flex-layout-flexbox-and-grid-layout-for-angular-component-6e7c24457b63)
+
+## Firebase
+https://ng-flex-layout-demo-242817.firebaseapp.com
+
+## Firebase Deploy - What Mother Never Told You About Deploying an Angular-CLI 8.x project to Firebase hosting
+IMPORTANT:
+1. Modify `angular.json` to remove anything after the word `dist` in the following line.  Remove any leading forward slash `/` characters too.
+    Example before:
+    ```typescript
+    "outputPath": "dist/angular-flex-layout-demo-app",
+    ```
+    Example after:
+    ```typescript
+    "outputPath": "dist",
+    ```
+
+2. Modify `firebase.json` to remove anything after the word `dist`
+    Example before:
+    ```typescript
+      "public": "dist/angular-flex-layout-demo-app",
+    ```
+    Example after:
+    ```typescript
+     "public": "dist",
+    ```
+
+3. EXTREMELY IMPORTANT, ESPECIALLY WHEN MOVING PROJECT TO A NEW MACHINE !!!!
+    ```
+    firebase use ng-flex-layout-demo-242817
+    ```
+
+After deploying, view your app at astute-coda-242712.web.app.
+
+https://ng-flex-layout-demo-242817.web.app/
+
+or
+
+https://ng-flex-layout-demo-242817.firebaseapp.com/
+

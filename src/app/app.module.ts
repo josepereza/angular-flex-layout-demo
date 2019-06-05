@@ -5,11 +5,12 @@ import {FlexLayoutModule, BREAKPOINT} from '@angular/flex-layout';
 
 import {RoutingModule} from './routing.module';
 import {AppComponent} from './app.component';
-import {CustomMaterialModule} from './material.module';
+
 import {
   YBA_BREAKPOINT_PROVIDER
 } from './stack-overflow/hide-custom-bp/hide-with-custom-bp.component';
 import {WatermarkComponent} from './watermark.component';
+import { CustomMaterialModule } from './shared/custom-material.module';
 
 const EXTRA_BREAKPOINTS = [{
   alias: 'xs.landscape',

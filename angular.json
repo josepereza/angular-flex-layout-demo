@@ -11,6 +11,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -26,7 +27,13 @@
             "scripts": []
           },
           "configurations": {
-            "development":{
+            "development": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "optimization": false,
               "outputHashing": "none",
               "sourceMap": true,
@@ -39,6 +46,12 @@
               "commonChunk": true
             },
             "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -63,7 +76,7 @@
             "browserTarget": "demo-app:build"
           },
           "configurations": {
-            "development":{
+            "development": {
               "browserTarget": "demo-app:build:development"
             },
             "production": {
@@ -146,10 +159,13 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "demo",
-      "styleext": "scss"
+      "style": "scss"
     },
     "@schematics/angular:directive": {
       "prefix": "demo"
     }
+  },
+  "cli": {
+    "analytics": "507dbd11-548f-43fe-a72c-2edf87e83e25"
   }
 }
